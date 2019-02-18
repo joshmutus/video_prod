@@ -5,7 +5,7 @@ import os
 import shutil
 
 @pytest.fixture(scope="session")
-def make_files(tmp_path):
+def make_files():
   print('setting up')
   test_path = os.path.join(os.getcwd(),'test')
   if not os.path.exists(test_path):

@@ -1,5 +1,8 @@
 """
 Move odd and even files into subfolder.
+
+usage:
+  python move_even_odd.py --path /path/to/folder
 """
 
 from __future__ import absolute_import
@@ -12,6 +15,7 @@ import argparse
 import shutil
 
 def list_files(path):
+  """Takes n ls and returns the files not the folders."""
   onlyfiles = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f))]
   return onlyfiles
 
